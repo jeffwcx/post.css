@@ -4,3 +4,17 @@
 * post.css
 */
 
+@import "variable";
+.#{$defaultClass} {
+  font-size: $defaultFontSize;
+  @import "header";
+  @import "paragraph";
+  @import "codeblock";
+  @import "table";
+  @import "blockquote";
+  @import "hr";
+  @import "list";
+
+  @import "link";
+  @import "code";
+}

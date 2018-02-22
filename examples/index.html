@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="post.css">
+  <title>post.css</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="markdown">
+    正在加载markdown 。。。 
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@8.4.1/dist/markdown-it.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('index.md')
+      .then(function (response) {
+        return response.text();
+      })
+      .then(function (response) {
+        var wrapper = document.querySelector('.markdown');
+        var md = window.markdownit();
+        var result = md.render(response);
+        wrapper.innerHTML = result;
+      })
+      .catch(function (err) {
+        alert(err);
+      })
+    }, false)
+  </script>
+</body>
+</html>

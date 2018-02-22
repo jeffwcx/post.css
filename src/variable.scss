@@ -1,0 +1,33 @@
+
+// colors
+$yellow-1: #fcf8e3;
+$yellow-2: #fdf7d6;
+$yellow-3: #f8e600;
+$yellow-4: #f7c600;
+
+$black-1: #333333;
+$black-2: #545158;
+$black-3: #19171c;
+$black-4: #000;
+
+$grey: #dcdcdc;
+
+$white: #fff;
+
+
+// settings
+
+$defaultFontSize: 16px !default;
+$defaultClass: "markdown" !default;
+$defaultTextColor: $black-4 !default;
+
+
+@function px2em ($px) {
+  @if (unitless($px)) {
+    @warn "Please add unit:px";
+    @return px2em($px + 0px);
+  } @else if (unit($px) == em) {
+    @return $px;
+  }
+  @return ($px / $defaultFontSize) * 1em;
+}

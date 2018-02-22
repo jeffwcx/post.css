@@ -1,0 +1,20 @@
+// code block
+
+$codeBlockBgd: $black-3;
+pre {
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding: 16px 20px;
+  border-radius: 6px;
+  background: $codeBlockBgd;
+}
+pre > code {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-size: px2em(16px);
+  background: transparent;
+  color: $white;
+  font-family: Monaco;
+}

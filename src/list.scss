@@ -1,0 +1,15 @@
+// list
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-left: 40px;
+  ol, ul {
+    margin-bottom: 0;
+  }
+  > li {
+    margin-top: 5px;
+    font-size: inherit;
+    line-height: 1.6;
+  }
+}

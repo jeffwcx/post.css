@@ -1,0 +1,12 @@
+// code
+
+$codeBgd: $yellow-3 !default;
+code {
+  padding: 2px 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background: $codeBgd;
+  border-radius: 3px;
+  font-family: inherit;
+  color: $defaultTextColor;
+}

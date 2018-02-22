@@ -1,0 +1,15 @@
+// link
+$linkColor: $yellow-4 !default;
+a {
+  color: $linkColor;
+  text-decoration: none;
+  code {
+    color: $defaultTextColor;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

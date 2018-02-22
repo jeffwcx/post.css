@@ -1,7 +1,7 @@
 {
   "name": "post.css",
   "version": "0.0.1",
-  "description": "CSS style for rich text and markdown",
+  "description": "CSS style for markdown",
   "main": "src/index.scss",
   "scripts": {
     "build": "gulp clean && gulp css && gulp minifyCSS",

@@ -14,7 +14,7 @@ gulp.task('clean', () => {
 
 gulp.task('css', () => {
   return gulp.src('./src/index.scss')
-    .pipe(rename('layit.css'))
+    .pipe(rename('post.css'))
     .pipe(srcmap.init())
       .pipe(sass({
         outputStyle: 'expanded'
@@ -24,6 +24,7 @@ gulp.task('css', () => {
       }))
     .pipe(srcmap.write('./'))
     .pipe(gulp.dest('./lib'))
+    .pipe(gulp.dest('./examples'))
 })
 
 gulp.task('minifyCSS', () => {
@@ -38,7 +39,7 @@ gulp.task('minifyCSS', () => {
 
 // dev
 gulp.task('dev', () => {
-  return gulp.watch('./src/*.scss', ['build'])
+  return gulp.watch('./src/*.scss', ['css'])
 })
 
 // test
