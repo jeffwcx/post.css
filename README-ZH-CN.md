@@ -17,15 +17,16 @@
 ### 在Sass/Scss中使用
 
 ```
-npm i -D post.css
+npm i -D post-style
 ```
 
 ```scss
-@import "~post.css";
+@import "~post-style";
 ```
 
 ### 在CSS中使用
 
 ```html
-<link rel="stylesheet" href="">
+<!-- cdn -->
+<link rel="stylesheet" href="https://unpkg.com/post-style@1.0.0/lib/post.min.css">
 ```

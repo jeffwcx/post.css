@@ -17,15 +17,16 @@ I use it in my hexo theme [hexo-theme-crafts](https://github.com/jeffwcx/hexo-th
 ### Use in Sass/Scss
 
 ```
-npm i -D post.css
+npm i -D post-style
 ```
 
 ```scss
-@import "~post.css";
+@import "~post-style";
 ```
 
 ### Use in CSS
 
 ```html
-<link rel="stylesheet" href="">
+<!-- cdn -->
+<link rel="stylesheet" href="https://unpkg.com/post-style@1.0.0/lib/post.min.css">
 ```
