@@ -14,12 +14,16 @@ $grey: #dcdcdc;
 
 $white: #fff;
 
+// typesettings
+$codeFontFamily: Monaco !default;
+
 
 // settings
 
 $defaultFontSize: 16px !default;
 $defaultClass: "markdown" !default;
 $defaultTextColor: $black-4 !default;
+
 
 
 @function px2em ($px) {

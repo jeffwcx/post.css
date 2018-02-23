@@ -28,5 +28,5 @@ npm i -D post-style
 
 ```html
 <!-- cdn -->
-<link rel="stylesheet" href="https://unpkg.com/post-style@1.0.0/lib/post.min.css">
+<link rel="stylesheet" href="https://unpkg.com/post-style/lib/post.min.css">
 ```

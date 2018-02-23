@@ -39,7 +39,7 @@ gulp.task('minifyCSS', () => {
 
 // dev
 gulp.task('dev', () => {
-  return gulp.watch('./src/*.scss', ['css'])
+  return gulp.watch('./src/**/*.scss', ['css'])
 })
 
 // test

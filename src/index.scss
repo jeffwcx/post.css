@@ -7,15 +7,19 @@
 @import "variable";
 .#{$defaultClass} {
   font-size: $defaultFontSize;
-  @import "header";
-  @import "paragraph";
-  @import "codeblock";
-  @import "table";
-  @import "blockquote";
-  @import "hr";
-  @import "list";
+  word-wrap: break-word;
+  // base
+  @import "base/header";
+  @import "base/paragraph";
+  @import "base/codeblock";
+  @import "base/table";
+  @import "base/blockquote";
+  @import "base/hr";
+  @import "base/list";
 
-  @import "link";
-  @import "code";
-  @import "image";
+  @import "base/link";
+  @import "base/code";
+  @import "base/image";
+  // extend
+  @import "extend/codeblock";
 }
