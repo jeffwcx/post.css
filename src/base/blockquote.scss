@@ -1,13 +1,27 @@
 // blockquote
 
-$blockquoteBorderColor: $yellow-2;
 $blockquoteColor: $black-2;
-
+$blockquoteSymbolColor: $yellow-2;
+@mixin symbol () {
+  width: 60px;
+  line-height: 1em;
+  text-align: center;
+  font-family: serif;
+  font-size: 80px;
+  position: absolute;
+  color: rgba($color: $blockquoteColor, $alpha: 0.5);
+}
 blockquote {
+  position: relative;
   margin: 0 0 25px 0;
-  padding: 4px 20px;
+  padding: 10px 20px 10px 60px;
   color: $blockquoteColor;
-  border-left: 6px solid $blockquoteBorderColor;
+  &::before {
+    content: '“';
+    @include symbol();
+    top: 0;
+    left: 0;
+  }
   > :last-child {
     margin-bottom: 0;
   }

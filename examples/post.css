@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 * Copyright 2018 Jeff Wang. All rights reserved.
 * Licensed under MIT.
@@ -111,10 +112,23 @@
 }
 
 .markdown blockquote {
+  position: relative;
   margin: 0 0 25px 0;
-  padding: 4px 20px;
+  padding: 10px 20px 10px 60px;
   color: #545158;
-  border-left: 6px solid #fdf7d6;
+}
+
+.markdown blockquote::before {
+  content: '“';
+  width: 60px;
+  line-height: 1em;
+  text-align: center;
+  font-family: serif;
+  font-size: 80px;
+  position: absolute;
+  color: rgba(84, 81, 88, 0.5);
+  top: 0;
+  left: 0;
 }
 
 .markdown blockquote > :last-child {
@@ -165,7 +179,7 @@
   padding: 2px 5px;
   margin-left: 4px;
   margin-right: 4px;
-  background: #f8e600;
+  background: rgba(251, 244, 59, 0.66);
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
