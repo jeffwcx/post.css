@@ -2,12 +2,11 @@
   "name": "post-style",
   "version": "1.0.2",
   "description": "CSS style for markdown",
-  "main": "src/index.scss",
+  "source": "examples/index.html",
   "scripts": {
-    "build": "gulp clean && gulp css && gulp minifyCSS",
-    "dev": "gulp dev",
-    "test": "gulp test",
-    "example": "serve ./examples -p 8080",
+    "build": "gulp",
+    "dev": "parcel & gulp dev",
+    "build-site": "gulp cleanDist && parcel build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "keywords": [
@@ -21,20 +20,23 @@
     "type": "git",
     "url": "https://github.com/jeffwcx/post.css.git"
   },
-  "author": "jeffone",
+  "author": "jeffwcx",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "cz-conventional-changelog": "^2.1.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-csso": "^3.0.1",
-    "gulp-mocha": "^5.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "node-sass": "^4.1.1"
+    "@parcel/config-default": "^2.8.3",
+    "@parcel/core": "^2.8.3",
+    "@parcel/transformer-raw": "^2.8.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "del": "^7.0.0",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "parcel": "^2.8.3",
+    "sass": "^1.58.0"
   },
   "config": {
     "commitizen": {

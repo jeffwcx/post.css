@@ -1,20 +1,20 @@
 
-<p align="center"><img src="examples/logo.png" alt="logo"></p>
+<p align="center" style="padding: 20px;"><img src="examples/logo.svg" alt="logo"></p>
 
-### [中文版文档](./README-ZH-CN.md)
+### [中文版文档](./README-zh_CN.md)
 
-CSS style for markdown.
-
-## Where to use?
-I use it in my hexo theme [hexo-theme-crafts](https://github.com/jeffwcx/hexo-theme-crafts), so you can use it in article or post page.
-
-
-## Preview
-![preview](./examples/preview.png)
+post.css is a css library for markdown document. 
 
 ## Install
 
-### Use in Sass/Scss
+### Using the `<link>` tag
+
+```html
+<!-- cdn -->
+<link rel="stylesheet" href="https://unpkg.com/post-style/lib/post.min.css">
+```
+
+### Using in Sass/Scss
 
 ```
 npm i -D post-style
@@ -22,11 +22,4 @@ npm i -D post-style
 
 ```scss
 @import "~post-style";
-```
-
-### Use in CSS
-
-```html
-<!-- cdn -->
-<link rel="stylesheet" href="https://unpkg.com/post-style/lib/post.min.css">
 ```

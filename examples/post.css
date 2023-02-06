@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-* Copyright 2018 Jeff Wang. All rights reserved.
+* Copyright 2023 jeffwcx. All rights reserved.
 * Licensed under MIT.
 * post.css
 */
@@ -8,7 +8,6 @@
   font-size: 16px;
   word-wrap: break-word;
 }
-
 .markdown h1 {
   margin-top: 0.9375em;
   margin-bottom: 0.9375em;
@@ -16,7 +15,6 @@
   font-weight: 600;
   line-height: 1.5;
 }
-
 .markdown h2 {
   margin-top: 0.9375em;
   margin-bottom: 0.9375em;
@@ -24,7 +22,6 @@
   font-weight: 600;
   line-height: 1.5;
 }
-
 .markdown h3 {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
@@ -32,7 +29,6 @@
   font-weight: 600;
   line-height: 1.5;
 }
-
 .markdown h4 {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
@@ -40,7 +36,6 @@
   font-weight: 600;
   line-height: 1.5;
 }
-
 .markdown h5 {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
@@ -48,7 +43,6 @@
   font-weight: 600;
   line-height: 1.5;
 }
-
 .markdown h6 {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
@@ -56,25 +50,20 @@
   font-weight: 600;
   line-height: 1.5;
 }
-
 .markdown p {
   margin-top: 0;
   margin-bottom: 25px;
   font-size: 1.125em;
   line-height: 1.8;
 }
-
 .markdown pre {
   overflow: auto;
   margin-top: 0;
   margin-bottom: 25px;
   padding: 16px 20px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  border-radius: 6px;
   background: #19171c;
 }
-
 .markdown pre > code {
   padding: 0;
   margin: 0;
@@ -84,7 +73,6 @@
   color: #fff;
   font-family: Monaco;
 }
-
 .markdown table {
   display: block;
   margin-top: 0;
@@ -93,138 +81,110 @@
   border-collapse: collapse;
   overflow: auto;
 }
-
 .markdown table th {
   padding: 10px 20px;
   border: 1px solid #dcdcdc;
   font-size: 1.125em;
   font-weight: 600;
 }
-
 .markdown table td {
   padding: 10px 20px;
   border: 1px solid #dcdcdc;
   font-size: 1em;
 }
-
 .markdown table tr:nth-of-type(even) {
   background: #fcf8e3;
 }
-
 .markdown blockquote {
   position: relative;
   margin: 0 0 25px 0;
   padding: 10px 20px 10px 60px;
   color: #545158;
 }
-
 .markdown blockquote::before {
-  content: '“';
+  content: "“";
   width: 60px;
   line-height: 1em;
   text-align: center;
   font-family: serif;
-  font-size: 80px;
+  font-size: 5em;
   position: absolute;
   color: rgba(84, 81, 88, 0.5);
   top: 0;
   left: 0;
 }
-
 .markdown blockquote > :last-child {
   margin-bottom: 0;
 }
-
 .markdown hr {
   margin: 25px 0;
   height: 4px;
   border: 0;
-  background: #fcf8e3;
+  background: #dcdcdc;
 }
-
 .markdown ol, .markdown ul {
   margin-top: 0;
   margin-bottom: 24px;
   padding-left: 40px;
 }
-
 .markdown ol ol, .markdown ol ul, .markdown ul ol, .markdown ul ul {
   margin-bottom: 0;
 }
-
 .markdown ol > li, .markdown ul > li {
   margin-top: 5px;
   font-size: inherit;
   line-height: 1.6;
 }
-
 .markdown a {
   color: #f7c600;
   text-decoration: none;
 }
-
 .markdown a code {
   color: #000;
 }
-
 .markdown a:active {
   opacity: 0.7;
 }
-
 .markdown a:hover {
   text-decoration: underline;
 }
-
 .markdown code {
   padding: 2px 5px;
   margin-left: 4px;
   margin-right: 4px;
   background: rgba(251, 244, 59, 0.66);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   font-family: inherit;
   color: #000;
 }
-
 .markdown img {
   max-width: 100%;
   border-style: none;
   background-color: transparent;
 }
-
 .markdown .highlight {
   margin: 0 0 25px 0;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  border-radius: 6px;
   overflow: auto;
 }
-
 .markdown .highlight table {
   margin-bottom: 0;
   display: table;
   max-width: 100%;
   width: 100%;
 }
-
 .markdown .highlight .code {
   padding: 0;
   width: 100%;
 }
-
 .markdown .highlight td {
   border: none;
 }
-
 .markdown .highlight pre {
   margin-bottom: 0;
   line-height: 1.5;
   color: #fff;
   font-family: Monaco;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
 }
-
-/*# sourceMappingURL=post.css.map */
+/*# sourceMappingURL=index.css.map */

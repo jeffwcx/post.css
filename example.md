@@ -25,7 +25,7 @@ ReactDOM.render(
 
 
 #### Following is an image
-![image](logo.png)
+![image](https://raw.githubusercontent.com/jeffwcx/post.css/master/examples/logo.svg)
 
 ##### Following is a blockquote
 

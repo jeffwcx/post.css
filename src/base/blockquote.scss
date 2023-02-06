@@ -7,7 +7,7 @@ $blockquoteSymbolColor: $yellow-2;
   line-height: 1em;
   text-align: center;
   font-family: serif;
-  font-size: 80px;
+  font-size: px2em(80px);
   position: absolute;
   color: rgba($color: $blockquoteColor, $alpha: 0.5);
 }

@@ -1,4 +1,4 @@
-
+@use "sass:math";
 // colors
 $yellow-1: #fcf8e3;
 $yellow-2: #fdf7d6;
@@ -15,7 +15,7 @@ $grey: #dcdcdc;
 $white: #fff;
 
 // typesettings
-$codeFontFamily: Monaco !default;
+$codeFontFamily: monospace, Menlo, Monaco !default;
 
 
 // settings
@@ -33,5 +33,5 @@ $defaultTextColor: $black-4 !default;
   } @else if (unit($px) == em) {
     @return $px;
   }
-  @return ($px / $defaultFontSize) * 1em;
+  @return math.div($px, $defaultFontSize) * 1em;
 }
