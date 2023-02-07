@@ -1,8 +1,8 @@
 // hr
-$hrBgd: $grey;
+$hr-bg: map-get($post-colors, "grey-4") !default;
 hr {
   margin: 25px 0;
   height: 4px;
   border: 0;
-  background: $hrBgd;
+  background: $hr-bg;
 }

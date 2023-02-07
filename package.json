@@ -2,11 +2,30 @@
   "name": "post-style",
   "version": "1.0.2",
   "description": "CSS style for markdown",
-  "source": "examples/index.html",
+  "main": "src/index.scss",
+  "targets": {
+    "main": false,
+    "docs": {
+      "source": "docs/index.html",
+      "distDir": "dist",
+      "context": "browser"
+    },
+    "css-dev": {
+      "source": "src/index.scss",
+      "distDir": "lib",
+      "optimize": false
+    },
+    "css-prod": {
+      "source": "src/index.scss",
+      "distDir": "lib"
+    }
+  },
   "scripts": {
-    "build": "gulp",
-    "dev": "parcel & gulp dev",
-    "build-site": "gulp cleanDist && parcel build",
+    "dev": "parcel --target docs",
+    "build": "npm run build-css && npm run build-css-prod",
+    "build-css": "parcel build --target css-dev --no-cache",
+    "build-css-prod": "parcel build --target css-prod --no-cache",
+    "build-site": "parcel build --target docs",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "keywords": [
@@ -25,22 +44,29 @@
   "devDependencies": {
     "@parcel/config-default": "^2.8.3",
     "@parcel/core": "^2.8.3",
+    "@parcel/plugin": "^2.8.3",
     "@parcel/transformer-raw": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.13",
     "cz-conventional-changelog": "^3.3.0",
-    "del": "^7.0.0",
-    "esm": "^3.2.25",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-csso": "^4.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
     "parcel": "^2.8.3",
-    "sass": "^1.58.0"
+    "parcel-namer-post": "link:./parcel-namer-post",
+    "postcss": "^8.4.21",
+    "sass": "^1.58.0",
+    "tailwindcss": "^3.2.4"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.10",
+    "@types/marked": "^4.0.8",
+    "marked": "^4.2.12",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": "> 0.1%, last 2 versions"
 }

@@ -1,190 +1,219 @@
-@charset "UTF-8";
-/*
-* Copyright 2023 jeffwcx. All rights reserved.
-* Licensed under MIT.
-* post.css
-*/
 .markdown {
-  font-size: 16px;
   word-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-size: 16px;
 }
+
 .markdown h1 {
-  margin-top: 0.9375em;
-  margin-bottom: 0.9375em;
+  margin-top: .9375em;
+  margin-bottom: .9375em;
   font-size: 2.5em;
   font-weight: 600;
   line-height: 1.5;
 }
+
 .markdown h2 {
-  margin-top: 0.9375em;
-  margin-bottom: 0.9375em;
+  margin-top: .9375em;
+  margin-bottom: .9375em;
   font-size: 2em;
   font-weight: 600;
   line-height: 1.5;
 }
+
 .markdown h3 {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin-top: .75em;
+  margin-bottom: .75em;
   font-size: 1.625em;
   font-weight: 600;
   line-height: 1.5;
 }
+
 .markdown h4 {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin-top: .75em;
+  margin-bottom: .75em;
   font-size: 1.375em;
   font-weight: 600;
   line-height: 1.5;
 }
+
 .markdown h5 {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin-top: .75em;
+  margin-bottom: .75em;
   font-size: 1.125em;
   font-weight: 600;
   line-height: 1.5;
 }
+
 .markdown h6 {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-  font-size: 0.875em;
+  margin-top: .75em;
+  margin-bottom: .75em;
+  font-size: .875em;
   font-weight: 600;
   line-height: 1.5;
 }
+
 .markdown p {
   margin-top: 0;
   margin-bottom: 25px;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.8;
 }
+
 .markdown pre {
-  overflow: auto;
+  background: #1f1f1f;
+  border-radius: 6px;
   margin-top: 0;
   margin-bottom: 25px;
   padding: 16px 20px;
-  border-radius: 6px;
-  background: #19171c;
-}
-.markdown pre > code {
-  padding: 0;
-  margin: 0;
-  line-height: 1.5;
-  font-size: 1em;
-  background: transparent;
-  color: #fff;
-  font-family: monospace, Menlo, Monaco;
-}
-.markdown table {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 25px;
-  border-spacing: 0;
-  border-collapse: collapse;
   overflow: auto;
 }
+
+.markdown pre > code {
+  color: #fff;
+  background: none;
+  margin: 0;
+  padding: 0;
+  font-family: monospace, Menlo, Monaco, Courier New;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.markdown table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 0;
+  margin-bottom: 25px;
+  display: block;
+  overflow: auto;
+}
+
 .markdown table th {
+  border: 1px solid #d9d9d9;
   padding: 10px 20px;
-  border: 1px solid #dcdcdc;
   font-size: 1.125em;
   font-weight: 600;
 }
+
 .markdown table td {
+  border: 1px solid #d9d9d9;
   padding: 10px 20px;
-  border: 1px solid #dcdcdc;
   font-size: 1em;
 }
-.markdown table tr:nth-of-type(even) {
-  background: #fcf8e3;
+
+.markdown table tr:nth-of-type(2n) {
+  background: #fafafa;
 }
+
 .markdown blockquote {
-  position: relative;
-  margin: 0 0 25px 0;
+  color: #8c8c8c;
+  margin: 0 0 25px;
   padding: 10px 20px 10px 60px;
-  color: #545158;
+  position: relative;
 }
-.markdown blockquote::before {
+
+.markdown blockquote:before {
   content: "“";
   width: 60px;
-  line-height: 1em;
   text-align: center;
-  font-family: serif;
+  color: rgba(140, 140, 140, .5);
+  font-family: Helvetica Neue, Arial, Times New Roman, Impact;
   font-size: 5em;
+  font-weight: bold;
+  line-height: 1em;
   position: absolute;
-  color: rgba(84, 81, 88, 0.5);
   top: 0;
   left: 0;
 }
+
 .markdown blockquote > :last-child {
   margin-bottom: 0;
 }
+
 .markdown hr {
-  margin: 25px 0;
   height: 4px;
+  background: #f0f0f0;
   border: 0;
-  background: #dcdcdc;
+  margin: 25px 0;
 }
+
 .markdown ol, .markdown ul {
   margin-top: 0;
   margin-bottom: 24px;
-  padding-left: 40px;
+  padding-left: 16px;
 }
+
 .markdown ol ol, .markdown ol ul, .markdown ul ol, .markdown ul ul {
   margin-bottom: 0;
+  padding-left: 30px;
 }
+
 .markdown ol > li, .markdown ul > li {
-  margin-top: 5px;
   font-size: inherit;
+  margin-top: 5px;
   line-height: 1.6;
 }
+
 .markdown a {
-  color: #f7c600;
+  color: #f6bc00;
   text-decoration: none;
 }
+
 .markdown a code {
-  color: #000;
+  color: #f6bc00;
 }
+
 .markdown a:active {
-  opacity: 0.7;
+  opacity: .7;
 }
+
 .markdown a:hover {
   text-decoration: underline;
 }
+
 .markdown code {
-  padding: 2px 5px;
+  color: #262626;
+  background: #fadd7a;
+  border-radius: 3px;
   margin-left: 4px;
   margin-right: 4px;
-  background: rgba(251, 244, 59, 0.66);
-  border-radius: 3px;
+  padding: 2px 5px;
   font-family: inherit;
-  color: #000;
 }
+
 .markdown img {
   max-width: 100%;
+  background-color: rgba(0, 0, 0, 0);
   border-style: none;
-  background-color: transparent;
 }
+
 .markdown .highlight {
-  margin: 0 0 25px 0;
   border-radius: 6px;
+  margin: 0 0 25px;
   overflow: auto;
 }
+
 .markdown .highlight table {
-  margin-bottom: 0;
-  display: table;
   max-width: 100%;
   width: 100%;
+  margin-bottom: 0;
+  display: table;
 }
+
 .markdown .highlight .code {
-  padding: 0;
   width: 100%;
+  padding: 0;
 }
+
 .markdown .highlight td {
   border: none;
 }
+
 .markdown .highlight pre {
-  margin-bottom: 0;
-  line-height: 1.5;
   color: #fff;
-  font-family: monospace, Menlo, Monaco;
   border-radius: 0;
+  margin-bottom: 0;
+  font-family: monospace, Menlo, Monaco, Courier New;
+  line-height: 1.5;
 }
-/*# sourceMappingURL=index.css.map */
+
+/*# sourceMappingURL=post.css.map */

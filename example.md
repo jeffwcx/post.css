@@ -1,3 +1,6 @@
+
+![image](https://raw.githubusercontent.com/jeffwcx/post.css/master/examples/logo.svg)
+
 # Following is a paragraph.
 
 The easiest way to get started with React is to use [this Hello World example code on CodePen](https://reactjs.org/redirect-to-codepen/hello-world). You don’t need to `install` `anything`; you can just open it in another tab and follow along as we go through `examples`. If you’d rather use a local development environment, check out the **Installation** section.
@@ -24,9 +27,6 @@ ReactDOM.render(
 + Reference
 
 
-#### Following is an image
-![image](https://raw.githubusercontent.com/jeffwcx/post.css/master/examples/logo.svg)
-
 ##### Following is a blockquote
 
 > The next few sections will gradually introduce you to using React. We will examine the building blocks of React apps: elements and components. Once you master them, you can create complex apps from small reusable pieces.
@@ -42,5 +42,8 @@ We also use some of the ES6 syntax in the examples. We try to use it sparingly b
 
 | id |	title |	permalink |	prev |	next |
 |---|:---|----|---|---:|
+| introducing-jsx | Introducing JSX | docs/introducing-jsx.html | hello-world.html | rendering-elements.html |
+| introducing-jsx | Introducing JSX | docs/introducing-jsx.html | hello-world.html | rendering-elements.html |
+| introducing-jsx | Introducing JSX | docs/introducing-jsx.html | hello-world.html | rendering-elements.html |
 | introducing-jsx | Introducing JSX | docs/introducing-jsx.html | hello-world.html | rendering-elements.html |
 

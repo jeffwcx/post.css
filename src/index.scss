@@ -3,10 +3,15 @@
 * Licensed under MIT.
 * post.css
 */
+@import "color-palettes";
+@import "themes/default";
+@import "variables";
 
-@import "variable";
-.#{$defaultClass} {
-  font-size: $defaultFontSize;
+$post-theme: $post-theme-default !default;
+
+.#{$post-class} {
+  font-family: map-get($post-theme, "font-family");
+  font-size: map-get($post-theme, "font-size-base");
   word-wrap: break-word;
   // base
   @import "base/header";

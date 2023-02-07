@@ -1,11 +1,15 @@
 
-<p align="center" style="padding: 20px;"><img src="examples/logo.svg" alt="logo"></p>
+<p align="center"><img width="600px" src="https://raw.githubusercontent.com/jeffwcx/post.css/master/examples/logo.svg" alt="logo"></p>
 
-### [中文版文档](./README-zh_CN.md)
+<p align="center">
+    <a href="https://github.com/jeffwcx/ohu-mobile/actions?query=branch%3Amaster" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/jeffwcx/post.css/.github/workflows/ci.yml?branch=master&style=for-the-badge" alt="CI" /></a>
+</p>
 
-post.css is a css library for markdown document. 
+### English | [中文](https://github.com/jeffwcx/post.css/blob/master/README-zh_CN.md) 
 
-## Install
+`post.css` is a extensible CSS library for markdown document. It provides multiple themes, you can visit [post-css.vercel.app](https://post-css.vercel.app) to select the theme you like.
+
+## Usage
 
 ### Using the `<link>` tag
 
@@ -23,3 +27,6 @@ npm i -D post-style
 ```scss
 @import "~post-style";
 ```
+
+### Using CSS variables to customize styles
+

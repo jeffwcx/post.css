@@ -1,7 +1,7 @@
 // table
 
-$tableLineColor: $grey;
-$tableBgd: $yellow-1;
+$table-border-color: map-get($post-colors, "grey-5") !default;
+$table-bg: map-get($post-colors, "grey-2") !default;
 
 table {
   display: block;
@@ -12,16 +12,16 @@ table {
   overflow: auto;
   th {
     padding: 10px 20px;
-    border: 1px solid $tableLineColor;
+    border: 1px solid $table-border-color;
     font-size: px2em(18px);
     font-weight: 600;
   }
   td {
     padding: 10px 20px;
-    border: 1px solid $tableLineColor;
+    border: 1px solid $table-border-color;
     font-size: px2em(16px);
   }
   tr:nth-of-type(even) {
-    background: $tableBgd;
+    background: $table-bg;
   }
 }

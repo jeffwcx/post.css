@@ -1,4 +1,5 @@
 // hexo render code block in another way, so ...
+$codeblock-highlight-text-color: map-get($post-colors, "grey-1") !default;
 
 .highlight {
   margin: 0 0 25px 0;
@@ -20,8 +21,8 @@
   pre {
     margin-bottom: 0;
     line-height: 1.5;
-    color: $white;
-    font-family: $codeFontFamily;
+    color: $codeblock-highlight-text-color;
+    font-family: $codeblock-font-family;
     border-radius: 0;
   }
 }

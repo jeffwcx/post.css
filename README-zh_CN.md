@@ -1,20 +1,24 @@
 
-<p align="center"><img src="examples/logo.png" alt="logo"></p>
+<p align="center"><img width="600px" src="examples/logo.svg" alt="logo"></p>
 
-### [English Documentation](./README.md)
+<p align="center">
+    <a href="https://github.com/jeffwcx/ohu-mobile/actions?query=branch%3Amaster" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/jeffwcx/post.css/.github/workflows/ci.yml?branch=master&style=for-the-badge" alt="CI" /></a>
+</p>
 
-为markdown准备的CSS样式表
+### 中文 | [English](https://github.com/jeffwcx/post.css/blob/master/README.md)
 
-## 在哪里使用？
-我在我的hexo主题[hexo-theme-crafts](https://github.com/jeffwcx/hexo-theme-crafts)中使用该样式表，你可以在文章页中使用该样式。
+为markdown文档准备的CSS样式库
 
+## 使用
 
-## 预览
-![preview](./examples/preview.png)
+### 使用`<link>` 标签引入
 
-## 安装
+```html
+<!-- cdn -->
+<link rel="stylesheet" href="https://unpkg.com/post-style/lib/post.min.css">
+```
 
-### 在Sass/Scss中使用
+### 在sass中使用
 
 ```
 npm i -D post-style
@@ -24,9 +28,3 @@ npm i -D post-style
 @import "~post-style";
 ```
 
-### 在CSS中使用
-
-```html
-<!-- cdn -->
-<link rel="stylesheet" href="https://unpkg.com/post-style/lib/post.min.css">
-```
