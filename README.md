@@ -1,5 +1,5 @@
 
-<p align="center"><img width="600px" src="https://raw.githubusercontent.com/jeffwcx/post.css/master/examples/logo.svg" alt="logo"></p>
+<p align="center"><img width="600px" src="https://raw.githubusercontent.com/jeffwcx/post.css/master/docs/logo.svg" alt="logo"></p>
 
 <p align="center">
     <a href="https://github.com/jeffwcx/ohu-mobile/actions?query=branch%3Amaster" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/jeffwcx/post.css/.github/workflows/ci.yml?branch=master&style=for-the-badge" alt="CI" /></a>
