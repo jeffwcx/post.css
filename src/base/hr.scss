@@ -1,8 +1,14 @@
 // hr
-$hr-bg: map-get($post-colors, "grey-4") !default;
-hr {
-  margin: 25px 0;
-  height: 4px;
-  border: 0;
-  background: $hr-bg;
+@include add-vars((
+  "hr-height": 4px,
+  "hr-bg": map-get($post-colors, "grey-4")
+));
+
+@mixin post-hr() {
+  hr {
+    margin: 1.6em 0;
+    height: get-var("hr-height");
+    border: 0;
+    background: get-var("hr-bg");
+  }
 }

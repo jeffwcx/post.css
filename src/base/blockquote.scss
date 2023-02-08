@@ -1,29 +1,39 @@
 // blockquote
-$blockquote-text-color: map-get($post-theme, "color-text-secondary") !default;
-$blockquote-symbol-color: rgba($blockquote-text-color, 0.5) !default;
+@include add-vars((
+  "blockquote-text-color": map-get($post-theme, "color-text-secondary"),
+  "blockquote-symbol-content": "'“'",
+  "blockquote-symbol-color": rgba(map-get($post-theme, "color-text-secondary"), 0.5),
+  "blockquote-symbol-size": 60px,
+  "blockquote-symbol-bg": transparent
+));
 
 @mixin symbol () {
-  width: 60px;
-  line-height: 1em;
+  min-width: 8px;
+  line-height: .6em;
   text-align: center;
   font-family: "Helvetica Neue","Arial", "Times New Roman", "Impact",;
   font-weight: bold;
-  font-size: px2em(80px);
+  font-size: 5em;
   position: absolute;
-  color: $blockquote-symbol-color;
+  color: get-var("blockquote-symbol-color");
+  background: get-var("blockquote-symbol-bg");
 }
-blockquote {
-  position: relative;
-  margin: 0 0 25px 0;
-  padding: 10px 20px 10px 60px;
-  color: $blockquote-text-color;
-  &::before {
-    content: '“';
-    @include symbol();
-    top: 0;
-    left: 0;
-  }
-  > :last-child {
-    margin-bottom: 0;
+
+@mixin post-blockquote() {
+  blockquote {
+    position: relative;
+    margin: 2.25em 0;
+    padding: 0 20px 0 get-var("blockquote-symbol-size");
+    color: get-var("blockquote-text-color");
+    &::before {
+      content: #{get-var("blockquote-symbol-content")};
+      @include symbol();
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 }

@@ -1,23 +1,27 @@
 // code block
-$codeblock-bg: map-get($post-colors, "grey-11") !default;
-$codeblock-text-color: map-get($post-colors, "grey-1") !default;
-$codeblock-font-family: map-get($post-theme, "font-family-code") !default;
-$codeblock-font-size: px2em(16px) !default;
+@include add-vars((
+  "codeblock-bg": map-get($post-colors, "grey-9"),
+  "codeblock-text-color": map-get($post-colors, "grey-1"),
+  "codeblock-font-family": map-get($post-theme, "font-family-code"),
+  "codeblock-font-size": 1em
+));
 
-pre {
-  overflow: auto;
-  margin-top: 0;
-  margin-bottom: 25px;
-  padding: 16px 20px;
-  border-radius: 6px;
-  background: $codeblock-bg;
-}
-pre > code {
-  padding: 0;
-  margin: 0;
-  line-height: 1.5;
-  font-size: $codeblock-font-size;
-  background: transparent;
-  color: $codeblock-text-color;
-  font-family: $codeblock-font-family;
+@mixin post-codeblock() {
+  pre {
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 16px 20px;
+    border-radius: 6px;
+    background: get-var("codeblock-bg");
+  }
+  pre > code {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: get-var("codeblock-font-size");
+    background: transparent;
+    color: get-var("codeblock-text-color");
+    font-family: get-var("codeblock-font-family");
+  }
 }

@@ -1,30 +1,43 @@
 /*
-* Copyright 2023 jeffwcx. All rights reserved.
+* Copyright 2018-2023 jeffwcx. All rights reserved.
 * Licensed under MIT.
 * post.css
 */
-@import "color-palettes";
-@import "themes/default";
 @import "variables";
+@import "themes/default";
+@import "themes/blue";
 
+$post-builtin-themes: default, blue;
 $post-theme: $post-theme-default !default;
+@import "builtin";
+$post-class: "markdown" !default;
+
+@import "modules";
 
 .#{$post-class} {
-  font-family: map-get($post-theme, "font-family");
-  font-size: map-get($post-theme, "font-size-base");
-  word-wrap: break-word;
-  // base
-  @import "base/header";
-  @import "base/paragraph";
-  @import "base/codeblock";
-  @import "base/table";
-  @import "base/blockquote";
-  @import "base/hr";
-  @import "base/list";
-
-  @import "base/link";
-  @import "base/code";
-  @import "base/image";
-  // extend
-  @import "extend/codeblock";
+  --post-builtin-themes: #{$post-builtin-themes};
+  --post-theme-default-color: #{$post-theme-default-color};
+  --post-theme-blue-color: #{$post-theme-blue-color};
+  @include generate-css-vars("default");
+  &.theme-blue {
+    $post-theme: $post-theme-blue !global;
+    @import "modules";
+    @include generate-css-vars("blue");
+  }
+  -webkit-text-size-adjust: 100%;
+  font-family: get-var("font-family");
+  font-size: get-var("font-size-base");
+  color: get-var("color-text");
+  @include post-blockquote;
+  @include post-code;
+  @include post-codeblock;
+  @include post-header;
+  @include post-hr;
+  @include post-image;
+  @include post-link;
+  @include post-list;
+  @include post-paragraph;
+  @include post-table;
+  @include post-highlight;
 }
+

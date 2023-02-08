@@ -1,17 +1,21 @@
 // link
-$link-text-color: map-get($post-theme, "color-primary-text") !default;
-$link-code-text-color: map-get($post-theme, "color-primary-text") !default;
+@include add-vars((
+  "link-text-color": map-get($post-theme, "color-primary-text"),
+  "link-code-text-color": map-get($post-theme, "color-primary-text")
+));
 
-a {
-  color: $link-text-color;
-  text-decoration: none;
-  code {
-    color: $link-code-text-color;
-  }
-  &:active {
-    opacity: 0.7;
-  }
-  &:hover {
-    text-decoration: underline;
+@mixin post-link() {
+  a {
+    color: get-var("link-text-color");
+    text-decoration: none;
+    code {
+      color: get-var("link-code-text-color");
+    }
+    &:active {
+      opacity: 0.7;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

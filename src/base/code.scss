@@ -1,13 +1,17 @@
 // code
-$code-text-color: map-get($post-theme, "color-on-primary-bg") !default;
-$color-bg-color: map-get($post-theme, "color-primary-bg") !default;
+@include add-vars((
+  "code-text-color": map-get($post-theme, "color-on-primary-bg"),
+  "code-bg-color": map-get($post-theme, "color-primary-bg")
+));
 
-code {
-  padding: 2px 5px;
-  margin-left: 4px;
-  margin-right: 4px;
-  background: $color-bg-color;
-  border-radius: 3px;
-  font-family: inherit;
-  color: $code-text-color;
+@mixin post-code() {
+  code {
+    padding: 2px 5px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background: get-var("code-bg-color");
+    border-radius: 3px;
+    font-family: inherit;
+    color: get-var("code-text-color");
+  }
 }

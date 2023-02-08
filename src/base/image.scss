@@ -1,7 +1,9 @@
 // image
 
-img {
-  max-width: 100%;
-  border-style: none;
-  background-color: transparent;
+@mixin post-image() {
+  img {
+    max-width: 100%;
+    border-style: none;
+    background-color: transparent;
+  }
 }

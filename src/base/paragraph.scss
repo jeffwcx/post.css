@@ -1,9 +1,13 @@
 // paragraph
-$paragraph-font-size: px2em(18px) !default;
+@include add-vars((
+  "p-font-size": 1.125em
+));
 
-p {
-  margin-top: 0;
-  margin-bottom: 25px;
-  font-size: $paragraph-font-size;
-  line-height: 1.8;
+@mixin post-paragraph() {
+  p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: get-var("p-font-size");
+    line-height: 1.7;
+  }
 }

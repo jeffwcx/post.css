@@ -1,49 +1,19 @@
 // header
 
-h1 {
-  margin-top: px2em(15px);
-  margin-bottom: px2em(15px);
-  font-size: px2em(40px);
-  font-weight: 600;
-  line-height: 1.5;
-}
+@mixin post-header() {
 
-h2 {
-  margin-top: px2em(15px);
-  margin-bottom: px2em(15px);
-  font-size: px2em(32px);
-  font-weight: 600;
-  line-height: 1.5;
-}
+  $headers: (h1, h2, h3, h4, h5, h6);
 
-h3 {
-  margin-top: px2em(12px);
-  margin-bottom: px2em(12px);
-  font-size: px2em(26px);
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-h4 {
-  margin-top: px2em(12px);
-  margin-bottom: px2em(12px);
-  font-size: px2em(22px);
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-h5 {
-  margin-top: px2em(12px);
-  margin-bottom: px2em(12px);
-  font-size: px2em(18px);
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-h6 {
-  margin-top: px2em(12px);
-  margin-bottom: px2em(12px);
-  font-size: px2em(14px);
-  font-weight: 600;
-  line-height: 1.5;
+  @each $name in $headers {
+    #{$name} {
+      margin-top: .9375em;
+      margin-bottom: .9375em;
+      font-size: map-get($post-theme, "font-size-#{$name}");
+      font-weight: 600;
+      line-height: 1.5;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 }

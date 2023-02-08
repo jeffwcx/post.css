@@ -1,0 +1,32 @@
+// hexo render code block in another way, so ...
+@include add-vars((
+  "highlight-text-color": map-get($post-colors, "grey-1")
+));
+
+@mixin post-highlight() {
+  .highlight {
+    margin: 0 0 25px 0;
+    border-radius: 6px;
+    overflow: auto;
+    table {
+      margin-bottom: 0;
+      display: table;
+      max-width: 100%;
+      width: 100%;
+    }
+    .code {
+      padding: 0;
+      width: 100%;
+    }
+    td {
+      border: none;
+    }
+    pre {
+      margin-bottom: 0;
+      line-height: 1.5;
+      color: get-var("highlight-text-color");
+      font-family: get-var("codeblock-font-family");
+      border-radius: 0;
+    }
+  }  
+}

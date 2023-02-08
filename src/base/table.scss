@@ -1,27 +1,30 @@
 // table
+@include add-vars((
+  "table-border-color": map-get($post-colors, "grey-5"),
+  "table-bg": map-get($post-colors, "grey-2")
+));
 
-$table-border-color: map-get($post-colors, "grey-5") !default;
-$table-bg: map-get($post-colors, "grey-2") !default;
-
-table {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 25px;
-  border-spacing: 0;
-  border-collapse: collapse;
-  overflow: auto;
-  th {
-    padding: 10px 20px;
-    border: 1px solid $table-border-color;
-    font-size: px2em(18px);
-    font-weight: 600;
-  }
-  td {
-    padding: 10px 20px;
-    border: 1px solid $table-border-color;
-    font-size: px2em(16px);
-  }
-  tr:nth-of-type(even) {
-    background: $table-bg;
+@mixin post-table() {
+  table {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    overflow: auto;
+    th {
+      padding: 10px 20px;
+      border: 1px solid get-var("table-border-color");
+      font-size: 1.125em;
+      font-weight: 600;
+    }
+    td {
+      padding: 10px 20px;
+      border: 1px solid get-var("table-border-color");
+      font-size: 1em;
+    }
+    tr:nth-of-type(even) {
+      background: get-var("table-bg");
+    }
   }
 }

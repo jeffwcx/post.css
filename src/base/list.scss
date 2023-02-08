@@ -1,16 +1,27 @@
 // list
+@include add-vars((
+  "list-bg-color": map-get($post-theme, "color-primary-bg")
+));
 
-ol, ul {
-  margin-top: 0;
-  margin-bottom: 24px;
-  padding-left: 16px;
+@mixin post-list() {
   ol, ul {
-    padding-left: 30px;
-    margin-bottom: 0;
-  }
-  > li {
-    margin-top: 5px;
-    font-size: inherit;
-    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    ol, ul {
+      padding-left: 1.75em;
+      margin-bottom: 0;
+    }
+    li {
+      margin-top: 5px;
+      font-size: 1em;
+      line-height: 1.6;
+      input[type="checkbox"] {
+        margin-right: .2em;
+        width: 1.1em;
+        height: 1.1em;
+        vertical-align: middle;
+      }
+    }
   }
 }

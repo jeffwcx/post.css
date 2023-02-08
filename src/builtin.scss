@@ -1,0 +1,36 @@
+@use "sass:math";
+@use "sass:map";
+
+@function px2em ($px) {
+  @if (unitless($px)) {
+    @warn "Please add unit:px";
+    @return px2em($px + 0px);
+  } @else if (unit($px) == em) {
+    @return $px;
+  }
+  @return math.div($px, 16px) * 1em;
+}
+
+@mixin add-vars($vars) {
+  @each $k, $v in $vars {
+    @if not map-has-key($post-theme, $k) {
+      $post-theme: map.merge($post-theme, ($k: $v)) !global;
+    }
+  }
+}
+
+@mixin generate-css-vars($theme-name) {
+  --post-theme: #{$theme-name};
+  @if $post-use-css-vars {
+    @each $k, $v in $post-theme {
+      --post-#{$k}: #{$v};
+    }
+  }
+}
+
+@function get-var($key) {
+  @if $post-use-css-vars {
+    @return var(--post-#{$key});
+  }
+  @return map-get($post-theme, $key);
+}
