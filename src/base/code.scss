@@ -1,7 +1,9 @@
 // code
+
+@use "sass:map";
 @include add-vars((
-  "code-text-color": map-get($post-theme, "color-on-primary-bg"),
-  "code-bg-color": map-get($post-theme, "color-primary-bg")
+  "code-text-color": map.get($post-theme, "color-on-primary-bg"),
+  "code-bg-color": map.get($post-theme, "color-primary-bg")
 ));
 
 @mixin post-code() {

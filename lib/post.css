@@ -17,12 +17,12 @@
   --post-font-size-h4: 1.125em;
   --post-font-size-h5: .875em;
   --post-font-size-h6: .75em;
-  --post-font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
-  --post-font-family-code: monospace, Menlo, Monaco, Courier New;
+  --post-font-family: Gill Sans, Gill Sans MT, calibri, Trebuchet MS, sans-serif;
+  --post-font-family-code: monospace, menlo, monaco, Courier New;
   --post-p-font-size: 1.125em;
   --post-codeblock-bg: #434343;
   --post-codeblock-text-color: #fff;
-  --post-codeblock-font-family: monospace, Menlo, Monaco, Courier New;
+  --post-codeblock-font-family: monospace, menlo, monaco, Courier New;
   --post-codeblock-font-size: 1em;
   --post-table-border-color: #d9d9d9;
   --post-table-bg: #fafafa;
@@ -61,8 +61,8 @@
   --post-font-size-h4: 1.125em;
   --post-font-size-h5: 1em;
   --post-font-size-h6: 1em;
-  --post-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --post-font-family-code: Menlo, Monaco, Consolas, Ubuntu Mono;
+  --post-font-family: -apple-system, blinkmacsystemfont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --post-font-family-code: menlo, monaco, consolas, ubuntu mono;
   --post-codeblock-bg: #141414;
   --post-table-bg: rgba(226, 243, 255, .2);
   --post-blockquote-text-color: #595959;
@@ -73,7 +73,7 @@
   --post-hr-bg: #f0f0f0;
   --post-p-font-size: 1.125em;
   --post-codeblock-text-color: #fff;
-  --post-codeblock-font-family: Menlo, Monaco, Consolas, Ubuntu Mono;
+  --post-codeblock-font-family: menlo, monaco, consolas, ubuntu mono;
   --post-codeblock-font-size: 1em;
   --post-table-border-color: #d9d9d9;
   --post-blockquote-symbol-color: rgba(140, 140, 140, .5);
@@ -98,7 +98,7 @@
   text-align: center;
   color: var(--post-blockquote-symbol-color);
   background: var(--post-blockquote-symbol-bg);
-  font-family: Helvetica Neue, Arial, Times New Roman, Impact;
+  font-family: Helvetica Neue, Arial, Times New Roman, Impact, sans-serif;
   font-size: 5em;
   font-weight: bold;
   line-height: .6em;

@@ -1,8 +1,10 @@
 // code block
+
+@use "sass:map";
 @include add-vars((
-  "codeblock-bg": map-get($post-colors, "grey-9"),
-  "codeblock-text-color": map-get($post-colors, "grey-1"),
-  "codeblock-font-family": map-get($post-theme, "font-family-code"),
+  "codeblock-bg": map.get($post-colors, "grey-9"),
+  "codeblock-text-color": map.get($post-colors, "grey-1"),
+  "codeblock-font-family": map.get($post-theme, "font-family-code"),
   "codeblock-font-size": 1em
 ));
 
@@ -15,6 +17,7 @@
     border-radius: 6px;
     background: get-var("codeblock-bg");
   }
+
   pre > code {
     padding: 0;
     margin: 0;

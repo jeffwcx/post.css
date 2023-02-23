@@ -1,7 +1,9 @@
 // hr
+
+@use "sass:map";
 @include add-vars((
   "hr-height": 4px,
-  "hr-bg": map-get($post-colors, "grey-4")
+  "hr-bg": map.get($post-colors, "grey-4")
 ));
 
 @mixin post-hr() {

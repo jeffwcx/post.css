@@ -1,17 +1,19 @@
 // blockquote
+
+@use "sass:map";
 @include add-vars((
-  "blockquote-text-color": map-get($post-theme, "color-text-secondary"),
+  "blockquote-text-color": map.get($post-theme, "color-text-secondary"),
   "blockquote-symbol-content": "'“'",
-  "blockquote-symbol-color": rgba(map-get($post-theme, "color-text-secondary"), 0.5),
+  "blockquote-symbol-color": rgba(map.get($post-theme, "color-text-secondary"), 0.5),
   "blockquote-symbol-size": 60px,
   "blockquote-symbol-bg": transparent
 ));
 
-@mixin symbol () {
+@mixin symbol() {
   min-width: 8px;
   line-height: .6em;
   text-align: center;
-  font-family: "Helvetica Neue","Arial", "Times New Roman", "Impact",;
+  font-family: "Helvetica Neue", Arial, "Times New Roman", Impact, sans-serif;
   font-weight: bold;
   font-size: 5em;
   position: absolute;
@@ -25,13 +27,17 @@
     margin: 2.25em 0;
     padding: 0 20px 0 get-var("blockquote-symbol-size");
     color: get-var("blockquote-text-color");
+
     &::before {
       content: #{get-var("blockquote-symbol-content")};
-      @include symbol();
+
+      @include symbol;
+
       top: 0;
       bottom: 0;
       left: 0;
     }
+
     > :last-child {
       margin-bottom: 0;
     }

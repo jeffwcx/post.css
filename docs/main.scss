@@ -1,8 +1,6 @@
-@tailwind base;
+@import './modern-normalize.css';
+
 @tailwind components;
 @tailwind utilities;
-ol, ul {
-  list-style: initial;
-}
 
 @import '../src/index.scss';

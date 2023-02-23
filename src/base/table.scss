@@ -1,7 +1,9 @@
 // table
+
+@use "sass:map";
 @include add-vars((
-  "table-border-color": map-get($post-colors, "grey-5"),
-  "table-bg": map-get($post-colors, "grey-2")
+  "table-border-color": map.get($post-colors, "grey-5"),
+  "table-bg": map.get($post-colors, "grey-2")
 ));
 
 @mixin post-table() {
@@ -12,17 +14,20 @@
     border-spacing: 0;
     border-collapse: collapse;
     overflow: auto;
+
     th {
       padding: 10px 20px;
       border: 1px solid get-var("table-border-color");
       font-size: 1.125em;
       font-weight: 600;
     }
+
     td {
       padding: 10px 20px;
       border: 1px solid get-var("table-border-color");
       font-size: 1em;
     }
+
     tr:nth-of-type(even) {
       background: get-var("table-bg");
     }

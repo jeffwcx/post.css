@@ -1,16 +1,18 @@
+@use "sass:map";
+
 // header
 
 @mixin post-header() {
-
   $headers: (h1, h2, h3, h4, h5, h6);
 
   @each $name in $headers {
     #{$name} {
       margin-top: .9375em;
       margin-bottom: .9375em;
-      font-size: map-get($post-theme, "font-size-#{$name}");
+      font-size: get-var("font-size-#{$name}");
       font-weight: 600;
       line-height: 1.5;
+
       &:first-child {
         margin-top: 0;
       }

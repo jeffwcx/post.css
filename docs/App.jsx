@@ -44,7 +44,7 @@ export function App() {
   const [md, setMD] = useState();
 
   useEffect(() => {
-    const node = document.getElementsByClassName('markdown')[0];
+    const node = document.getElementsByClassName('markdown-body')[0];
     const style = getComputedStyle(node);
     const str = style.getPropertyValue('--post-builtin-themes');
     const builtinThemes = str.replace(/\s/g, '').split(',');
@@ -110,9 +110,9 @@ export function App() {
       <div className="md:max-w-3xl md:mx-auto p-6 md:p-12 border shadow-lg rounded-2xl">
         {
           md ? (
-            <div className={`markdown theme-${theme}`} dangerouslySetInnerHTML={{ __html: md }} />
+            <div className={`markdown-body theme-${theme}`} dangerouslySetInnerHTML={{ __html: md }} />
           ) : (
-            <div className="markdown">
+            <div className="markdown-body">
               正在加载中
             </div>
           )

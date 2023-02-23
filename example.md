@@ -127,7 +127,7 @@ function test() {
 图片加链接 (Image + Link)：
 
 
-[![](https://www.mdeditor.com/images/logos/markdown.png)](https://www.mdeditor.com/images/logos/markdown.png "markdown")
+[![](https://raw.githubusercontent.com/jeffwcx/post.css/master/docs/logo.svg)](https://raw.githubusercontent.com/jeffwcx/post.css/master/docs/logo.svg "markdown")
 
 > Follow your heart.
 

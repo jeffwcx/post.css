@@ -1,19 +1,24 @@
 // link
+
+@use "sass:map";
 @include add-vars((
-  "link-text-color": map-get($post-theme, "color-primary-text"),
-  "link-code-text-color": map-get($post-theme, "color-primary-text")
+  "link-text-color": map.get($post-theme, "color-primary-text"),
+  "link-code-text-color": map.get($post-theme, "color-primary-text")
 ));
 
 @mixin post-link() {
   a {
     color: get-var("link-text-color");
     text-decoration: none;
+
     code {
       color: get-var("link-code-text-color");
     }
+
     &:active {
       opacity: 0.7;
     }
+
     &:hover {
       text-decoration: underline;
     }

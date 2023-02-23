@@ -10,7 +10,7 @@
 $post-builtin-themes: default, blue;
 $post-theme: $post-theme-default !default;
 @import "builtin";
-$post-class: "markdown" !default;
+$post-class: "markdown-body" !default;
 
 @import "modules";
 
