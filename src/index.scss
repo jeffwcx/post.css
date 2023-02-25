@@ -5,9 +5,10 @@
 */
 @import "variables";
 @import "themes/default";
+@import "themes/dark";
 @import "themes/blue";
+@import "themes/blue-dark";
 
-$post-builtin-themes: default, blue;
 $post-theme: $post-theme-default !default;
 @import "builtin";
 $post-class: "markdown-body" !default;
@@ -15,19 +16,34 @@ $post-class: "markdown-body" !default;
 @import "modules";
 
 .#{$post-class} {
-  --post-builtin-themes: #{$post-builtin-themes};
-  --post-theme-default-color: #{$post-theme-default-color};
-  --post-theme-blue-color: #{$post-theme-blue-color};
-  @include generate-css-vars("default");
+  --post-theme: default;
+  @include generate-css-vars($post-theme);
+  &.theme-dark {
+    --post-theme: dark;
+    $post-theme: $post-theme-dark !global;
+    @import "modules";
+    @include generate-css-vars($post-theme);
+    color-scheme: get-var("color-scheme");
+  }
   &.theme-blue {
+    --post-theme: blue;
     $post-theme: $post-theme-blue !global;
     @import "modules";
-    @include generate-css-vars("blue");
+    @include generate-css-vars($post-theme);
+    color-scheme: get-var("color-scheme");
+  }
+  &.theme-blue-dark {
+    --post-theme: blue-dark;
+    $post-theme: $post-theme-blue-dark !global;
+    @import "modules";
+    @include generate-css-vars($post-theme);
+    color-scheme: get-var("color-scheme");
   }
   -webkit-text-size-adjust: 100%;
   font-family: get-var("font-family");
   font-size: get-var("font-size-base");
   color: get-var("color-text");
+  background: get-var("color-bg");
   @include post-blockquote;
   @include post-code;
   @include post-codeblock;

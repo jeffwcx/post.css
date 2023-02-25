@@ -8,10 +8,9 @@
   }
 }
 
-@mixin generate-css-vars($theme-name) {
-  --post-theme: #{$theme-name};
+@mixin generate-css-vars($theme) {
   @if $post-use-css-vars {
-    @each $k, $v in $post-theme {
+    @each $k, $v in $theme {
       --post-#{$k}: #{$v};
     }
   }

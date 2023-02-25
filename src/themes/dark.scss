@@ -1,0 +1,18 @@
+@use "sass:map";
+@import './default';
+
+$post-theme-dark: map.merge($post-theme-default, (
+  "color-scheme": dark,
+  "color-primary": map.get($post-colors, "orange-5"),
+  "color-primary-bg": map.get($post-colors, "orange-3"),
+  "color-primary-text": map.get($post-colors, "orange-6"),
+  "color-text": map.get($post-colors, "grey-1"),
+  "color-text-secondary": map.get($post-colors, "grey-6"),
+  "color-on-primary-bg": map.get($post-colors, "grey-11"),
+  "color-bg": map.get($post-colors, "grey-11"),
+  "table-bg": rgba(map.get($post-colors, "grey-8"), .2),
+  "table-border-color": map.get($post-colors, "grey-9"),
+  "hr-bg": map.get($post-colors, "grey-9")
+))!default;
+
+

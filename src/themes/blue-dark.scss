@@ -1,0 +1,20 @@
+@use "sass:map";
+@import './blue';
+
+$post-theme-blue-dark: map.merge($post-theme-blue, (
+  "color-scheme": dark,
+  "color-primary": map.get($post-colors, "blue-9"),
+  "color-primary-bg": map.get($post-colors, "grey-9"),
+  "color-primary-text": map.get($post-colors, "blue-8"),
+  "color-text": map.get($post-colors, "grey-1"),
+  "color-text-secondary": map.get($post-colors, "grey-6"),
+  "color-on-primary-bg": map.get($post-colors, "grey-1"),
+  "color-bg": map.get($post-colors, "grey-11"),
+  "table-bg": rgba(map.get($post-colors, "grey-8"), .2),
+  "table-border-color": map.get($post-colors, "grey-9"),
+  "blockquote-symbol-bg": map.get($post-colors, "grey-9"),
+  "hr-bg": map.get($post-colors, "grey-9")
+
+))!default;
+
+

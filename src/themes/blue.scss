@@ -3,6 +3,7 @@
 $default-font-family: -apple-system,blinkmacsystemfont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $default-font-family-code: menlo, monaco, consolas, ubuntu mono;
 $post-theme-blue: (
+  "color-scheme": light,
   "color-primary": map.get($post-colors, "blue-9"),
   "color-primary-bg": map.get($post-colors, "blue-1"),
   "color-primary-text": map.get($post-colors, "blue-9"),
@@ -10,6 +11,7 @@ $post-theme-blue: (
   "color-text-secondary": map.get($post-colors, "grey-7"),
   "color-on-primary": map.get($post-colors, "grey-1"),
   "color-on-primary-bg": map.get($post-colors, "blue-10"),
+  "color-bg": transparent,
   "font-size-base": 14px,
   "font-size-h1": px2em(36px),
   "font-size-h2": px2em(28px),
@@ -31,5 +33,4 @@ $post-theme-blue: (
   "hr-height": 4px,
   "hr-bg": map.get($post-colors, "grey-4")
 ) !default;
-$post-theme-blue-color: map.get($post-theme-blue, "color-primary");
 
