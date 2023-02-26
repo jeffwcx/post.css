@@ -79,64 +79,14 @@ HTML document...
 npm i -D post-style
 ```
 
-To import Post-Style in your `js` files (using a bundling tool such as Webpack):
+To import `post.css` in your `js` files (using a bundling tool such as Webpack):
 
 ```js
-# Import the CSS file
+// Import the CSS file
 import 'post-style/lib/post.css';
 ```
 ```js
-# Import the SCSS file
-import 'post-style';
-```
-
-In your `scss` files, you can import Post-Style directly using `@import`. This method allows you to customize some variables:
-
-------
-give me the raw text, you can wrap it with <codeblock />
-
-Sure, here's the raw text wrapped with `<codeblock>`:
-
-
-### Using `post.css` via NPM
-
-```
-npm i -D post-style
-```
-
-To import Post-Style in your `js` files (using a bundling tool such as Webpack):
-
-```js
-# Import the CSS file
-import 'post-style/lib/post.css';
-```
-```js
-# Import the SCSS file
-import 'post-style';
-```
-
-In your `scss` files, you can import Post-Style directly using `@import`. This method allows you to customize some variables:
-
-------
-
-Sure, here's the raw text wrapped with `<codeblock>`:
-
-<codeblock>
-
-### Using Post-Style via NPM
-
-```
-npm i -D post-style
-```
-
-To import Post-Style in your `js` files (using a bundling tool such as Webpack):
-
-```js
-# Import the CSS file
-import 'post-style/lib/post.css';
-```
-```js
-# Import the SCSS file
+// Import the SCSS file
 import 'post-style';
 ```
 
@@ -259,7 +209,7 @@ $post-theme: map.merge($post-theme, (
 
 ### Customization through CSS variables
 
-All parameters of `$post-theme` have CSS variables, just add `--post-` in front of the variable to use the CSS variable:
+All keys of `$post-theme` have CSS variables, just add `--post-` in front of the variable to use the CSS variable:
 
 ```css
 .markdown-body {
