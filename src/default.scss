@@ -1,13 +1,10 @@
 /*
 * Copyright 2018-2023 jeffwcx. All rights reserved.
 * Licensed under MIT.
-* post.css
+* post.default.css
 */
 @import "variables";
 @import "themes/default";
-@import "themes/dark";
-@import "themes/blue";
-@import "themes/blue-dark";
 
 $post-theme: $post-theme-default !default;
 @import "builtin";
@@ -16,29 +13,9 @@ $post-selector: ".markdown-body" !default;
 @import "modules";
 
 #{$post-selector} {
-  --post-theme: default;
+  --post-theme: light;
   @include generate-css-vars($post-theme);
-  &.theme-dark {
-    --post-theme: dark;
-    $post-theme: $post-theme-dark !global;
-    @import "modules";
-    @include generate-css-vars($post-theme);
-    color-scheme: get-var("color-scheme");
-  }
-  &.theme-blue {
-    --post-theme: blue;
-    $post-theme: $post-theme-blue !global;
-    @import "modules";
-    @include generate-css-vars($post-theme);
-    color-scheme: get-var("color-scheme");
-  }
-  &.theme-blue-dark {
-    --post-theme: blue-dark;
-    $post-theme: $post-theme-blue-dark !global;
-    @import "modules";
-    @include generate-css-vars($post-theme);
-    color-scheme: get-var("color-scheme");
-  }
+  color-scheme: get-var("color-scheme");
   -webkit-text-size-adjust: 100%;
   font-family: get-var("font-family");
   font-size: get-var("font-size-base");

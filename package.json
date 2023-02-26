@@ -10,13 +10,49 @@
       "distDir": "dist",
       "context": "browser"
     },
-    "css-dev": {
+    "post": {
       "source": "src/index.scss",
       "distDir": "lib",
       "optimize": false
     },
-    "css-prod": {
+    "post.min": {
       "source": "src/index.scss",
+      "distDir": "lib"
+    },
+    "post.default": {
+      "source": "src/default.scss",
+      "distDir": "lib",
+      "optimize": false
+    },
+    "post.default.min": {
+      "source": "src/default.scss",
+      "distDir": "lib"
+    },
+    "post.dark": {
+      "source": "src/dark.scss",
+      "distDir": "lib",
+      "optimize": false
+    },
+    "post.dark.min": {
+      "source": "src/dark.scss",
+      "distDir": "lib"
+    },
+    "post.blue": {
+      "source": "src/blue.scss",
+      "distDir": "lib",
+      "optimize": false
+    },
+    "post.blue.min": {
+      "source": "src/blue.scss",
+      "distDir": "lib"
+    },
+    "post.blue.dark": {
+      "source": "src/blue.dark.scss",
+      "distDir": "lib",
+      "optimize": false
+    },
+    "post.blue.dark.min": {
+      "source": "src/blue.dark.scss",
       "distDir": "lib"
     }
   },
@@ -29,12 +65,14 @@
   ],
   "scripts": {
     "dev": "parcel --target docs",
-    "build": "npm run build-css && npm run build-css-prod",
-    "build-css": "parcel build --target css-dev --no-cache",
-    "build-css-prod": "parcel build --target css-prod --no-cache",
-    "build-site": "parcel build --target docs",
-    "lint": "stylelint src/**/*.scss",
-    "fix": "stylelint src/**/*.scss --fix"
+    "build": "rimraf ./lib && concurrently \"npm:build:*\"",
+    "build:full": "concurrently \"parcel build --target post --no-cache\" \"parcel build --target post.min --no-cache\"",
+    "build:default": "concurrently \"parcel build --target post.default --no-cache\" \"parcel build --target post.default.min --no-cache\"",
+    "build:dark": "concurrently \"parcel build --target post.dark --no-cache\" \"parcel build --target post.dark.min --no-cache\"",
+    "build:blue": "concurrently \"parcel build --target post.blue --no-cache\" \"parcel build --target post.blue.min --no-cache\"",
+    "build:blue-dark": "concurrently \"parcel build --target post.blue.dark --no-cache\" \"parcel build --target post.blue.dark.min --no-cache\"",
+    "build-site": "rimraf ./dist && parcel build --target docs",
+    "lint": "stylelint src/**/*.scss"
   },
   "keywords": [
     "css",
@@ -58,10 +96,12 @@
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
     "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
     "cz-conventional-changelog": "^3.3.0",
     "parcel": "^2.8.3",
     "parcel-namer-post": "link:./parcel-namer-post",
     "postcss": "^8.4.21",
+    "rimraf": "^4.1.2",
     "sass": "^1.58.0",
     "semantic-release": "^20.1.0",
     "stylelint": "^15.2.0",

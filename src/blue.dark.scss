@@ -1,0 +1,36 @@
+/*
+* Copyright 2018-2023 jeffwcx. All rights reserved.
+* Licensed under MIT.
+* post.blue.dark.css
+*/
+@import "variables";
+@import "themes/blue-dark";
+
+$post-theme: $post-theme-blue-dark !default;
+@import "builtin";
+$post-selector: ".markdown-body" !default;
+
+@import "modules";
+
+#{$post-selector} {
+  --post-theme: dark;
+  @include generate-css-vars($post-theme);
+  color-scheme: get-var("color-scheme");
+  -webkit-text-size-adjust: 100%;
+  font-family: get-var("font-family");
+  font-size: get-var("font-size-base");
+  color: get-var("color-text");
+  background: get-var("color-bg");
+  @include post-blockquote;
+  @include post-code;
+  @include post-codeblock;
+  @include post-header;
+  @include post-hr;
+  @include post-image;
+  @include post-link;
+  @include post-list;
+  @include post-paragraph;
+  @include post-table;
+  @include post-highlight;
+}
+

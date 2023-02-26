@@ -4,11 +4,17 @@ const plugin = require("@parcel/plugin")
 const namer = new plugin.Namer({
   name({bundle}) {
     const targetName = bundle.target.name;
-    if (targetName === 'css-prod' || targetName === 'css-dev') {
+    if (targetName.startsWith('post')) {
       let filePath = bundle.getMainEntry().filePath;
       const basename = path.basename(filePath);
-      if (['index.scss'].includes(basename)) {
-        return targetName === 'css-prod' ? 'post.min.css' : 'post.css';
+      if ([
+        'index.scss',
+        'default.scss',
+        'dark.scss',
+        'blue.scss',
+        'blue.dark.scss'
+      ].includes(basename)) {
+        return `${targetName}.css`;
       }
     }
     return null;

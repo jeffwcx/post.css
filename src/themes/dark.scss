@@ -10,6 +10,7 @@ $post-theme-dark: map.merge($post-theme-default, (
   "color-text-secondary": map.get($post-colors, "grey-6"),
   "color-on-primary-bg": map.get($post-colors, "grey-11"),
   "color-bg": map.get($post-colors, "grey-11"),
+  "codeblock-bg": map.get($post-colors, "grey-10"),
   "table-bg": rgba(map.get($post-colors, "grey-8"), .2),
   "table-border-color": map.get($post-colors, "grey-9"),
   "hr-bg": map.get($post-colors, "grey-9")
